@@ -1,0 +1,191 @@
+/*
+
+0-600px [PHONE]
+600px - 900px [TABLET PORTRAIT]
+900PX - 1200PX [TABLET LANDSCAPE]
+1200px - 1800px [is where our normal styles applied]
+1800px + [BIG DESKTOP]
+ */
+/*
+$breakpoint arguments choices 
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+1em = 16px
+
+ORDER OF STYLING
+  1. BASE
+  1. TYPOGRAPHY
+  3. GENRAL LAYOUT & GRID
+  4. PAGE LAYOUT
+  5. COMPONENTS
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Rajdhani", sans-serif; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 60.25%; } }
+  html a {
+    text-decoration: none; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  outline: none; }
+  @media only screen and (max-width: 75em) {
+    body {
+      padding: 0; } }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      padding: 0; } }
+
+::selection {
+  color: #fff;
+  background-color: #808f85; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-text-justify {
+  text-align: justify !important;
+  text-justify: inter-word !important; }
+
+.u-margin-bottom-2 {
+  margin-bottom: 2rem !important; }
+
+.u-margin-bottom-4 {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-4 {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-8 {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-2 {
+  margin-top: 8rem !important; }
+
+.u-margin-top-4 {
+  margin-top: 4rem !important; }
+
+.u-margin-top-8 {
+  margin-top: 8rem !important; }
+
+.u-margin-top-10 {
+  margin-top: 10rem !important; }
+
+.u-float-right {
+  float: right; }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.text-gray {
+  color: gray; }
+
+.navbar {
+  position: relative;
+  top: 0;
+  background-color: #fff;
+  padding: 0rem 2rem;
+  height: 0rem;
+  min-height: 10vh;
+  overflow: hidden;
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase; }
+  .navbar__menu {
+    justify-content: space-between; }
+  .navbar__brand {
+    display: block;
+    font-size: 1.8rem;
+    padding: 2.2rem 1rem; }
+  .navbar__brand-link {
+    cursor: default; }
+  .navbar__list {
+    display: flex;
+    margin: 0;
+    list-style-type: none; }
+  .navbar__item {
+    position: relative;
+    padding: 2rem 1rem;
+    font-size: 1.8rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: ease-in 0.2s; }
+  .navbar__item a:visited {
+    color: #595959; }
+  .navbar__item:hover {
+    background-color: #91c499; }
+  .navbar__item:hover a {
+    color: #fff; }
+  .navbar__button {
+    padding: 1rem 1rem; }
+  .navbar__button:hover .navbar__login-button {
+    box-shadow: inset 400px 0 0 0 #91c499; }
+  .navbar__login-button {
+    display: inline-block;
+    font-size: 1.5rem;
+    border: 2px solid #91c499;
+    border-radius: 0px;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    font-family: "Rajdhani", sans-serif;
+    color: #595959;
+    letter-spacing: 1px;
+    box-shadow: inset 0 0 0 0 #91c499;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s; }
+
+.site__title {
+  display: flex;
+  justify-content: center;
+  background: url("https://images.unsplash.com/photo-1562051725-cc35a65c8227?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  min-height: 110vh; }
+
+.site__background h1,
+.site h3 {
+  margin: 0.3rem; }
+
+.site__background h1 {
+  font-size: 5.5rem; }
+
+.site__background h3 {
+  font-size: 3rem; }
+
+.site__background {
+  padding-top: 10rem;
+  text-align: center;
+  color: #f2e9dc; }
+
+.site__explore-button {
+  margin: 1.8rem;
+  background-color: #cfd11a; }

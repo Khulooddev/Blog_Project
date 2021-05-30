@@ -1,0 +1,76 @@
+// Navbar Style
+.navbar {
+  position: relative;
+  top: 0;
+  background-color: $color-white;
+  padding: 0rem 2rem;
+  height: 0rem;
+  min-height: 10vh;
+  overflow: hidden;
+  font-family: $font-type-1;
+  text-transform: uppercase;
+
+  &__menu {
+    justify-content: space-between;
+  }
+  &__brand {
+    display: block;
+    font-size: 1.8rem;
+    padding: 2.2rem 1rem;
+  }
+  &__brand-link {
+    cursor: default;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    position: relative;
+    padding: 2rem 1rem;
+    font-size: 1.8rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: ease-in 0.2s;
+  }
+
+  &__item a:visited {
+    color: $color-gray-dark-4;
+  }
+
+  &__item:hover {
+    background-color: $color-primary-2;
+  }
+
+  &__item:hover a {
+    color: $color-white;
+  }
+
+  &__button {
+    padding: 1rem 1rem;
+  }
+
+  &__button:hover &__login-button {
+    box-shadow: inset 400px 0 0 0 $color-primary-2;
+  }
+
+  &__login-button {
+    display: inline-block;
+    font-size: 1.5rem;
+    border: 2px solid $color-primary-2;
+    border-radius: 0px;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    font-family: $font-type-1;
+    color: $color-gray-dark-4;
+    letter-spacing: 1px;
+    box-shadow: inset 0 0 0 0 $color-primary-2;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+}
+// End of Navbar Style

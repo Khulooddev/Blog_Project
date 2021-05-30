@@ -1,0 +1,26 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass sass/main.scss css/style.css --watch",
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khulooddev/Blog_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khulooddev/Blog_Project/issues"
+  },
+  "homepage": "https://github.com/Khulooddev/Blog_Project#readme",
+  "dependencies": {
+    "node-sass": "^6.0.0",
+    "postcss": "^8.3.0",
+    "sass-loader": "^11.1.1"
+  }
+}

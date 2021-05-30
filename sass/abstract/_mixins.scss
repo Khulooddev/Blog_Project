@@ -1,0 +1,77 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin gradient-text-color {
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  color: transparent; // make it transparet so you can see the background color
+}
+
+@mixin center-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//  MEDIA QUERIY MANAGER
+/*
+
+0-600px [PHONE]
+600px - 900px [TABLET PORTRAIT]
+900PX - 1200PX [TABLET LANDSCAPE]
+1200px - 1800px [is where our normal styles applied]
+1800px + [BIG DESKTOP]
+ */
+
+/*
+$breakpoint arguments choices 
+-phone
+-tab-port
+-tab-land
+-big-desktop
+
+1em = 16px
+
+ORDER OF STYLING
+  1. BASE
+  1. TYPOGRAPHY
+  3. GENRAL LAYOUT & GRID
+  4. PAGE LAYOUT
+  5. COMPONENTS
+*/
+@mixin respond($break-point) {
+  @if $break-point == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $break-point == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $break-point == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $break-point == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

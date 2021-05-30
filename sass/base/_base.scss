@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: $font-type-1;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px , 10 / 16 * 100
+
+  @include respond(tab-land) {
+    font-size: 60.25%; // 1rem = 9px , 9/ 16 * 100
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px , 8/ 16 * 100
+  }
+
+  @include respond(phone) {
+    font-size: 37.5%; // 1rem = 6px , 6/ 16 * 100
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px , 12/ 16 * 100
+  }
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  outline: none;
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+
+  @include respond(phone) {
+    padding: 0;
+  }
+}
+
+::selection {
+  color: $color-white;
+  background-color: $color-primary;
+}
